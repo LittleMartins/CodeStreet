@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeStreet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Corregido el enlace a Bootstrap -->
+    <link rel="icon" href="logonav2.ico">
+
+    <style>
+        /* Estilo para hacer parpadear el texto */
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .blink-text {
+            animation: blink 1s infinite; /* Aplica la animación al texto */
+        }
+
+        /* Estilo para el texto en mayúsculas, blanco y con una fuente llamativa */
+        .uppercase-text {
+            text-transform: uppercase; /* Convierte el texto a mayúsculas */
+            color: white; /* Color de texto blanco */
+            font-family: 'Arial Black', sans-serif; /* Tipo de fuente llamativa */
+        }
+
+        /* Estilo para las imágenes dentro del carousel */
+        .carousel-item img {
+            max-width: 400px; /* Establece el ancho máximo de las imágenes */
+            height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+            margin: 0 auto; /* Centra las imágenes horizontalmente */
+        }
+
+        /* Cambiar el fondo del carousel */
+        #carouselExample {
+            background-color: white; /* Cambia el color de fondo */
+            /* Puedes utilizar una imagen de fondo en lugar de un color */
+            /* background-image: url('ruta/a/imagen.jpg'); */
+            /* background-size: cover; */
+            /* background-position: center; */
+        }
+
+        /* Estilo para las flechas del carrusel */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black; /* Cambia el color de las flechas */
+        }
+
+        /* Estilo para el contenedor del botón "Ver más productos" */
+        .ver-mas-btn-container {
+            max-width: 400px; /* Establece el ancho máximo del contenedor */
+            margin: 20px auto; /* Ajusta el margen para centrar horizontalmente y añade margen superior */
+        }
+
+        /* Estilo para el botón "Ver más productos" */
+        .ver-mas-btn {
+            background-color: #ffc107; /* Color de fondo amarillo */
+            color: black; /* Color de letra negro */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%; /* Ajusta el ancho al 100% del contenedor */
+            text-align: center; /* Centra el texto horizontalmente */
+            text-decoration: none; /* Quita el subrayado del enlace */
+            transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+        }
+
+        .ver-mas-btn:hover {
+            background-color: #ffa000; /* Cambia el color de fondo al pasar el ratón */
+        }
+
+        /* Estilo para el texto "STOCK" */
+        .stock-container h3 {
+            color: black; /* Cambia el color del texto a negro */
+        }
+    </style>
+</head>
+<body>
+    <p class="primero blink-text uppercase-text" style="margin-bottom: 0;">Envíos gratis por compras sobre $50.000</p>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black; margin-top: 0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#"><img src="logonav2.png" alt=""></a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Productos.html">Productos</a> <!-- Corregido aquí -->
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Info
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="QuienesSomos.html">Quienes somos</a></li>
+                            <li><a class="dropdown-item" href="Envios.html">Envios</a></li>
+                            <li><a class="dropdown-item" href="Devolucion.html">Devolucion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <img src="banner code street.png" alt="Portada de League of Legends" style="width: 100%; height: auto;">
+    <div class="stock-container">
+        <h3>STOCK</h3>
+    </div>
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="polera1.png" class="d-block w-100" alt="Primera imagen">
+            </div>
+            <div class="carousel-item">
+                <img src="poleron.png" class="d-block w-100" alt="Segunda imagen">
+            </div>
+            <div class="carousel-item">
+                <img src="ej3.png" class="d-block w-100" alt="Tercera imagen">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        <!-- Contenedor para el botón "Ver más productos" -->
+        <div class="ver-mas-btn-container">
+            <a href="Productos.html" class="ver-mas-btn">Ver más productos</a>
+        </div>
+    </div>
+    <hr>
+    <!--copy mas red social-->
+    <footer class="footer">
+        <div class="left">
+            <p>&copy; CodeStreet.</p>
+        </div>
+        <div class="right">
+            <a href="https://instagram.com/tu_cuenta_de_instagram" target="_blank">
+                <img src="iglogo.png" alt="instagram" class="iglogo1">
+            </a>
+        </div>
+        <div style="clear: both;"></div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script> <!-- Corregido el enlace a Bootstrap -->
+</body>
+</html>

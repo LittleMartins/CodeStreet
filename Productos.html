@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityThreads - Productos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="icon" href="logonav2.ico">
+    <style>
+        /* Estilo para hacer parpadear el texto */
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .blink-text {
+            animation: blink 1s infinite; /* Aplica la animación al texto */
+        }
+
+        /* Estilo para el texto en mayúsculas, blanco y con una fuente llamativa */
+        .uppercase-text {
+            text-transform: uppercase; /* Convierte el texto a mayúsculas */
+            color: white; /* Color de texto blanco */
+            font-family: 'Arial Black', sans-serif; /* Tipo de fuente llamativa */
+            font-size: 16px; /* Tamaño de letra */
+        }
+
+        .card-img-top {
+            max-height: 200px; /* Ajustar altura máxima de la imagen */
+            object-fit: contain; /* Ajustar el tamaño de la imagen manteniendo la proporción */
+        }
+    </style>
+</head>
+<body>
+    <p class="primero uppercase-text blink-text" style="margin-bottom: 0;">Envíos gratis por compras sobre $50.000</p>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black; margin-top: 0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="logonav2.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Info
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="QuienesSomos.html">Quienes somos</a></li>
+                            <li><a class="dropdown-item" href="Envios.html">Envios</a></li>
+                            <li><a class="dropdown-item" href="Devolucion.html">Devolucion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="polera1.png" class="card-img-top" alt="Polera 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Polera</h5>
+                        <p class="card-text">$20.00</p>
+                        <div class="form-group">
+                            <label for="sizeSelect1">Seleccione Talla:</label>
+                            <select class="form-control" id="sizeSelect1">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="polera1.png" class="card-img-top" alt="Polera 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Polera</h5>
+                        <p class="card-text">$25.00</p>
+                        <div class="form-group">
+                            <label for="sizeSelect2">Seleccione Talla:</label>
+                            <select class="form-control" id="sizeSelect2">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="polera1.png" class="card-img-top" alt="Polera 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Polera</h5>
+                        <p class="card-text">$30.00</p>
+                        <div class="form-group">
+                            <label for="sizeSelect3">Seleccione Talla:</label>
+                            <select class="form-control" id="sizeSelect3">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="polera1.png" class="card-img-top" alt="Polera 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Polera</h5>
+                        <p class="card-text">$35.00</p>
+                        <div class="form-group">
+                            <label for="sizeSelect4">Seleccione Talla:</label>
+                            <select class="form-control" id="sizeSelect4">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 5 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="polera1.png" class="card-img-top" alt="Polera 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Polera</h5>
+                        <p class="card-text">$40.00</p>
+                        <div class="form-group">
+                            <label for="sizeSelect5">Seleccione Talla:</label>
+                            <select class="form-control" id="sizeSelect5">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 6 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="polera1.png" class="card-img-top" alt="Polera 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Polera</h5>
+                        <p class="card-text">$45.00</p>
+                        <div class="form-group">
+                            <label for="sizeSelect6">Seleccione Talla:</label>
+                            <select class="form-control" id="sizeSelect6">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
