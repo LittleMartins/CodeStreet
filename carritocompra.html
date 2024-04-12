@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeStreet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="logonav2.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-B2pZeK/PZuL1DfGtnT+j9I4v3i1RczR6P2T4UmrToOo+UB1h19h9zrqrKDE5Od5S5upcfO1HEdI0Zb45qZpwSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Estilo para hacer parpadear el texto */
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .blink-text {
+            animation: blink 1s infinite; /* Aplica la animación al texto */
+        }
+
+        /* Estilo para el texto en mayúsculas, blanco y con una fuente llamativa */
+        .uppercase-text {
+            text-transform: uppercase; /* Convierte el texto a mayúsculas */
+            color: white; /* Color de texto blanco */
+            font-family: 'Arial Black', sans-serif; /* Tipo de fuente llamativa */
+        }
+
+        /* Estilo para la ventana del carrito vacío */
+        .carrito-vacio {
+            display: none; /* Oculta la ventana inicialmente */
+            position: fixed;
+            top: 50%;
+            left: -100%; /* Inicialmente fuera del área visible */
+            transform: translateY(-50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            animation: slideIn 0.5s forwards; /* Animación para desplegar la ventana */
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                left: -100%; /* Comienza fuera del área visible */
+            }
+            to {
+                opacity: 1;
+                left: 50%; /* Se desplaza hacia el centro */
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="primero blink-text uppercase-text" style="margin-bottom: 0;">Envíos gratis por compras sobre $50.000</p>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black; margin-top: 0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#"><img src="logonav2.png" alt=""></a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Info
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="QuienesSomos.html">Quienes somos</a></li>
+                            <li><a class="dropdown-item" href="Envios.html">Envios</a></li>
+                            <li><a class="dropdown-item" href="Devolucion.html">Devolucion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Carrito de compras -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a id="carrito-link" class="nav-link" href="#">
+                            <img src="carritosuper.jpg" width="80" height="80" alt="">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="carritosuper fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="carrito-vacio" id="carritoVacio">
+        <h4>El carrito está vacío 😢</h4>
+    </div>
+
+    <img src="banner code street.png" alt="Portada de League of Legends" style="width: 100%; height: auto;">
+    <div class="stock-container">
+        <h3>STOCK</h3>
+    </div>
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="polera1.png" class="d-block w-100" alt="Primera imagen">
+            </div>
+            <div class="carousel-item">
+                <img src="poleron.png" class="d-block w-100" alt="Segunda imagen">
+            </div>
+            <div class="carousel-item">
+                <img src="ej3.png" class="d-block w-100" alt="Tercera imagen">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        <!-- Contenedor para el botón "Ver más productos" -->
+        <div class="ver-mas-btn-container">
+            <a href="Productos.html" class="ver-mas-btn">Ver más productos</a>
+        </div>
+    </div>
+    <hr>
+    <!--copy mas red social-->
+    <footer class="footer">
+        <div class="left">
+            <p>&copy; CodeStreet.</p>
+        </div>
+        <div class="right">
+            <a href="https://instagram.com/tu_cuenta_de_instagram" target="_blank">
+                <img src="iglogo.png" alt="instagram" class="iglogo1">
+            </a>
+        </div>
+        <div style="clear: both;"></div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Función que se ejecutará al hacer clic en el enlace del carrito
+        document.getElementById('carrito-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita que se realice la acción predeterminada del enlace
+
+            // Aquí puedes colocar la lógica para verificar si el carrito está vacío
+            // y mostrar la ventana del carrito vacío
+
+            // Por ejemplo, aquí mostramos la ventana del carrito vacío
+            document.getElementById('carritoVacio').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

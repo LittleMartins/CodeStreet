@@ -1,20 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeStreet</title>
-    
+    <title>CodeStreet - Envíos</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css ">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="logonav2.ico">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-B2pZeK/PZuL1DfGtnT+j9I4v3i1RczR6P2T4UmrToOo+UB1h19h9zrqrKDE5Od5S5upcfO1HEdI0Zb45qZpwSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Estilos adicionales */
+        body {
+            margin-bottom: 100px; /* Ajusta el margen inferior del cuerpo para dejar espacio al footer */
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .cancelar-btn {
+            margin-left: 10px;
+        }
+
+        /* Estilos para el mensaje de anuncio */
+        .announcement {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #007bff; /* Color azul Bootstrap */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 9999; /* Para asegurarse de que esté por encima de otros elementos */
+            display: none; /* Por defecto, el mensaje está oculto */
+        }
+    </style>
 </head>
 <body>
-    <p class="primero" style="margin-bottom: 0;">Envíos gratis por compras sobre $50.000</p>
+    <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black; margin-top: 0;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <a class="navbar-brand" href="#"><img src="logonav2.png" alt=""></a>
-            </a>
+            <a class="navbar-brand" href="#"><img src="logonav2.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,16 +59,14 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Productos.html"">Productos</a>
+                        <a class="nav-link" href="Productos.html">Productos</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Info
-                        </a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Info</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="QuienesSomos.html">Quienes somos</a></li>
-                            <li><a class="dropdown-item" href="Envios.html">Envios</a></li>
-                            <li><a class="dropdown-item" href="Devolucion.html">Devolucion</a></li>
+                            <li><a class="dropdown-item" href="QuienesSomos.html">Quiénes somos</a></li>
+                            <li><a class="dropdown-item" href="Envios.html">Envíos</a></li>
+                            <!-- Agrega más elementos del menú desplegable aquí -->
                         </ul>
                     </li>
                 </ul>
@@ -41,4 +74,61 @@
         </div>
     </nav>
 
-<script src ="./js/bootstrap.bundle.min.js"></script>
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Envíos</h1>
+                <p>¡Gracias por elegir nuestros servicios de envío! En CodeStreet nos esforzamos por ofrecerte la mejor experiencia de envío posible.</p>
+                <p>Por favor, complete el siguiente formulario para enviar su solicitud de envío:</p>
+                <!-- Formulario de envío -->
+                <form action="procesar_envio.php" method="POST" onsubmit="showMessage()">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label">Ciudad</label>
+                        <input type="text" class="form-control" id="ciudad" name="ciudad" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="codigo_postal" class="form-label">Código Postal</label>
+                        <input type="text" class="form-control" id="codigo_postal" name="codigo_postal" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <a href="index.html" class="btn btn-secondary cancelar-btn">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Anuncio -->
+    <div class="announcement" id="announcement">
+        ¡Gracias por enviar tu información! Pronto nos pondremos en contacto contigo.
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <span>© 2024 CodeStreet. Todos los derechos reservados.</span>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        function showMessage() {
+            var announcement = document.getElementById("announcement");
+            announcement.style.display = "block"; // Mostrar el anuncio
+
+            setTimeout(function() {
+                window.location.href = "index.html"; // Redirigir al usuario al inicio después de 5 segundos
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

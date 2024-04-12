@@ -8,15 +8,12 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="icon" href="logonav2.ico">
     <style>
-        /* Estilo para hacer parpadear el texto */
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        .blink-text {
-            animation: blink 1s infinite; /* Aplica la animación al texto */
+        /* Establece la imagen de fondo */
+        body {
+            background-image: url('fondogalaxy.jpg'); /* Ruta de la imagen de fondo */
+            background-size: cover; /* Cubre todo el contenedor con la imagen */
+            background-repeat: repeat; /* Repite la imagen si es necesario para cubrir todo el fondo */
+            background-position: center; /* Centra la imagen en el fondo */
         }
 
         /* Estilo para el texto en mayúsculas, blanco y con una fuente llamativa */
@@ -28,13 +25,43 @@
         }
 
         .card-img-top {
-            max-height: 200px; /* Ajustar altura máxima de la imagen */
+            max-height: 400px; /* Ajustar altura máxima de la imagen */
             object-fit: contain; /* Ajustar el tamaño de la imagen manteniendo la proporción */
+        }
+
+        /* Ajustes para centrar elementos */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Cambiado a min-height para garantizar el centrado vertical */
+        }
+
+        .card {
+            max-width: 350px; /* Ajustar el ancho máximo de la tarjeta */
+            margin: 0 auto; /* Centrar la tarjeta */
+        }
+
+        .card-title {
+            font-size: 24px; /* Aumentar el tamaño de la fuente del título */
+        }
+
+        .card-text {
+            font-size: 20px; /* Aumentar el tamaño de la fuente del precio */
+        }
+
+        .row {
+            text-align: center;
+        }
+
+        /* Ajustar altura de todas las imágenes de las tarjetas */
+        .card-img-custom {
+            height: 300px; /* Establecer la altura deseada */
         }
     </style>
 </head>
 <body>
-    <p class="primero uppercase-text blink-text" style="margin-bottom: 0;">Envíos gratis por compras sobre $50.000</p>
+    <p class="primero uppercase-text" style="margin-bottom: 0;">Envíos gratis por compras sobre $50.000</p>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black; margin-top: 0;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -71,10 +98,10 @@
             <!-- Producto 1 -->
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <img src="polera1.png" class="card-img-top" alt="Polera 1">
+                    <img src="polera1.png" class="card-img-top card-img-custom" alt="Polera 1">
                     <div class="card-body">
                         <h5 class="card-title">Polera</h5>
-                        <p class="card-text">$20.00</p>
+                        <p class="card-text">$20.000</p>
                         <div class="form-group">
                             <label for="sizeSelect1">Seleccione Talla:</label>
                             <select class="form-control" id="sizeSelect1">
@@ -93,10 +120,10 @@
             <!-- Producto 2 -->
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <img src="polera1.png" class="card-img-top" alt="Polera 2">
+                    <img src="POLERA3.png" class="card-img-top card-img-custom" alt="Polera 2">
                     <div class="card-body">
                         <h5 class="card-title">Polera</h5>
-                        <p class="card-text">$25.00</p>
+                        <p class="card-text">$20.000</p>
                         <div class="form-group">
                             <label for="sizeSelect2">Seleccione Talla:</label>
                             <select class="form-control" id="sizeSelect2">
@@ -115,10 +142,10 @@
             <!-- Producto 3 -->
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <img src="polera1.png" class="card-img-top" alt="Polera 3">
+                    <img src="polera2.png" class="card-img-top card-img-custom" alt="Polera 3">
                     <div class="card-body">
                         <h5 class="card-title">Polera</h5>
-                        <p class="card-text">$30.00</p>
+                        <p class="card-text">$20.000</p>
                         <div class="form-group">
                             <label for="sizeSelect3">Seleccione Talla:</label>
                             <select class="form-control" id="sizeSelect3">
@@ -134,74 +161,12 @@
                     </div>
                 </div>
             </div>
-            <!-- Producto 4 -->
-            <div class="col-lg-4 mb-4">
-                <div class="card">
-                    <img src="polera1.png" class="card-img-top" alt="Polera 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Polera</h5>
-                        <p class="card-text">$35.00</p>
-                        <div class="form-group">
-                            <label for="sizeSelect4">Seleccione Talla:</label>
-                            <select class="form-control" id="sizeSelect4">
-                                <option value="XS">XS</option>
-                                <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                                <option value="XL">XL</option>
-                                <option value="XXL">XXL</option>
-                            </select>
-                        </div>
-                        <button class="btn btn-primary">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 5 -->
-            <div class="col-lg-4 mb-4">
-                <div class="card">
-                    <img src="polera1.png" class="card-img-top" alt="Polera 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Polera</h5>
-                        <p class="card-text">$40.00</p>
-                        <div class="form-group">
-                            <label for="sizeSelect5">Seleccione Talla:</label>
-                            <select class="form-control" id="sizeSelect5">
-                                <option value="XS">XS</option>
-                                <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                                <option value="XL">XL</option>
-                                <option value="XXL">XXL</option>
-                            </select>
-                        </div>
-                        <button class="btn btn-primary">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 6 -->
-            <div class="col-lg-4 mb-4">
-                <div class="card">
-                    <img src="polera1.png" class="card-img-top" alt="Polera 6">
-                    <div class="card-body">
-                        <h5 class="card-title">Polera</h5>
-                        <p class="card-text">$45.00</p>
-                        <div class="form-group">
-                            <label for="sizeSelect6">Seleccione Talla:</label>
-                            <select class="form-control" id="sizeSelect6">
-                                <option value="XS">XS</option>
-                                <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                                <option value="XL">XL</option>
-                                <option value="XXL">XXL</option>
-                            </select>
-                        </div>
-                        <button class="btn btn-primary">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 CityThreads. Todos los derechos reservados.</p>
+    </footer>
 
     <script src="./js/bootstrap.bundle.min.js"></script>
 </body>

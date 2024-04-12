@@ -99,3 +99,29 @@ body {
 .stock-container h3 {
     color: white;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    min-height: 100%;
+    margin-bottom: -50px; /* Deja espacio para el footer */
+}
+
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+}
